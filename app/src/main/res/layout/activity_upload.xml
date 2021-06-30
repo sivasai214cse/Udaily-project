@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Upload"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/lnr1"
+        android:layout_width="match_parent"
+        android:layout_height="350dp"
+        android:background="@drawable/back"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="250dp"
+            android:layout_height="250dp"
+            android:layout_gravity="center_vertical|center_horizontal"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/upicon" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/cloud_upload" />
+
+        <Button
+            android:id="@+id/uploadic"
+            android:layout_width="150dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/uploadbtn"
+            android:elevation="10dp"
+            android:text="upload" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnChoose"
+        android:layout_width="150dp"
+        android:layout_height="40dp"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/uploadbtn"
+        android:elevation="10dp"
+        android:text="choose"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="120dp"/>
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="166dp"
+        android:layout_marginLeft="30dp"
+        android:fontFamily="sans-serif-condensed-medium"
+        android:textSize="20sp"
+        android:text="NOTE-" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text ="1.Please UPLOAD PDF Format \n\n2. Rename the PDf as SUB_NAME.pdf.\n\t\tEg-Name Siva Sai Behera\n\t\tsubject- Design and Analysis of Algorithms\n\t\tFile Name must be DAA_SSB.pdf "
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="60dp"
+        android:layout_centerHorizontal="true"
+        android:fontFamily="sans-serif-condensed-medium" />
+
+</RelativeLayout>
