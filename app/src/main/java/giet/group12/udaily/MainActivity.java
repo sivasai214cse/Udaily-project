@@ -9,6 +9,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.Button;
+import android.widget.ProgressBar;
 
 import com.google.android.material.textfield.TextInputLayout;
 import com.google.firebase.auth.FirebaseAuth;
@@ -26,6 +27,7 @@ public class MainActivity extends AppCompatActivity {
     FirebaseDatabase rootNode;
     DatabaseReference reference;
     FirebaseAuth Auth;
+    ProgressBar progressBar;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -38,6 +40,8 @@ public class MainActivity extends AppCompatActivity {
         regPhone = findViewById(R.id.phoneno);
         regPassword = findViewById(R.id.pass);
         Auth = FirebaseAuth.getInstance();
+        progressBar=findViewById(R.id.progress);
+        progressBar.setVisibility(View.GONE);
 
 login.setOnClickListener(new View.OnClickListener() {
     @Override
@@ -115,6 +119,7 @@ login.setOnClickListener(new View.OnClickListener() {
                         String phoneDB = snapshot.child(userEnteredPhone).child("phoneNo").getValue(String.class);
                         String emailDB = snapshot.child(userEnteredPhone).child("email").getValue(String.class);
                         String usernameDB = snapshot.child(userEnteredPhone).child("username").getValue(String.class);
+                        progressBar.setVisibility(View.VISIBLE);
 
                         SharedPreferences sp =getSharedPreferences("login",MODE_PRIVATE);
                         SharedPreferences.Editor editor = sp.edit();

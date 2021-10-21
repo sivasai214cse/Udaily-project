@@ -17,7 +17,7 @@
      <ImageView
          android:layout_width="116dp"
          android:layout_height="111dp"
-         app:srcCompat="@drawable/id"
+         app:srcCompat="@drawable/logp"
          android:layout_gravity="center_horizontal"
          android:layout_marginTop="125dp"
          android:paddingBottom="10dp"
@@ -38,25 +38,25 @@
             android:id="@+id/mail"
             android:layout_marginLeft="10dp"
             />
-   <com.google.android.material.textfield.TextInputLayout
-         android:layout_width="match_parent"
-         android:layout_height="wrap_content"
-         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-         android:id="@+id/phoneno"
-       android:layout_marginTop="20dp"
-       android:layout_marginLeft="60dp"
-       android:paddingRight="10dp"
-       >
-       <com.google.android.material.textfield.TextInputEditText
-       android:layout_width="match_parent"
-       android:layout_height="wrap_content"
-       android:layout_toRightOf="@+id/mail"
-       android:layout_marginLeft="8dp"
-       android:hint="Phone no"
-       android:inputType="number"
-           android:text=""
-       />
-   </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/phoneno"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="60dp"
+            android:layout_marginTop="20dp"
+            android:paddingRight="10dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_toRightOf="@+id/mail"
+                android:hint="Phone no"
+                android:inputType="number"
+                android:text="" />
+        </com.google.android.material.textfield.TextInputLayout>
 
         <ImageView
             android:layout_width="50dp"
@@ -117,11 +117,18 @@
         android:layout_gravity="center"
         android:layout_marginTop="10dp"
         android:background="#00000000"
-        android:elevation="3dp"
+        android:elevation="10dp"
         android:text="New user? SIGN UP"
         android:textColor="#000"
         android:backgroundTint="#689F38"
         android:fontFamily="sans-serif-condensed"
         android:id="@+id/signup_screen"
+        />
+    <ProgressBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="25dp"
+        android:id="@+id/progress"
         />
 </LinearLayout>

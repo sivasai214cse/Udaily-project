@@ -29,7 +29,7 @@ import java.io.File;
 import java.util.Arrays;
 
 public class Upload extends AppCompatActivity {
-    Button upload2,choose;
+    Button upload2, choose;
     private StorageReference ref;
     private FirebaseStorage storage;
     private StorageReference storageReference;
@@ -86,7 +86,7 @@ public class Upload extends AppCompatActivity {
                 .setTitle("OverWrite?")
                 .setPositiveButton("Confirm", (dialog, which) -> {uploadFile(v);})
                 .setNegativeButton("Cancel", (dialog, which) -> {})
-                .setMessage("This will OverWrite the file in the cloud").show();
+                .setMessage("This PDF already exist, it may overwrite !!").show();
     }
 
 
